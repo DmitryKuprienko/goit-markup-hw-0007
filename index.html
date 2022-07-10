@@ -21,35 +21,41 @@
     <!--верхня линия-->
     <header class="header">
       <!--навигатор сайта-->
-      <div class="container site-nav">
-        <nav class="site nav">
+      <div class="container header--alignment">
+        <nav class="site-nav">
           <a href="#" lang="en" class="link logo">
-            <span class="logo-web">Web</span>Studio
+            <span class="logo__color-web">Web</span>Studio
           </a>
-          <ul class="nav list">
-            <li class="nav item">
-              <a href="index.html" class="nav link emphasis current">Студия</a>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a
+                href="index.html"
+                class="site-nav__link site-nav--emphasis current"
+                >Студия</a
+              >
             </li>
-            <li class="nav item">
-              <a href="portfolio.html" class="nav link emphasis">Портфолио</a>
+            <li class="site-nav__item">
+              <a href="portfolio.html" class="site-nav__link site-nav--emphasis"
+                >Портфолио</a
+              >
             </li>
-            <li class="nav item">
-              <a href="#" class="nav link emphasis">Kонтакты</a>
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link site-nav--emphasis">Kонтакты</a>
             </li>
           </ul>
         </nav>
         <!--почта и телефон-->
-        <ul class="contacts list">
-          <li class="contacts item">
-            <a href="mailto:info@devstudio.com" class="contacts link mail">
-              <svg class="icon-mail" width="16px" height="12px">
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" class="contacts__link mail">
+              <svg class="contacts__icon" width="16px" height="12px">
                 <use href="./images/sprite.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
-          <li class="contacts item">
-            <a href="tel:+380961111111" class="contacts link tel">
-              <svg class="icon-tel" width="12px" height="16px">
+          <li class="contacts__item">
+            <a href="tel:+380961111111" class="contacts__link tel">
+              <svg class="contacts__icon" width="12px" height="16px">
                 <use href="./images/sprite.svg#smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -60,10 +66,10 @@
 
     <main>
       <!-- головний герой-main hero -->
-      <section class="section main hero-fon">
+      <section class="hero hero--fon section">
         <div class="container main">
-          <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="main btr" data-modal-open>
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <button type="button" class="hero-btr button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -377,8 +383,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-blok">
-          <a href="#" lang="en" class="link logo-footer"
-            ><span class="logo-web">Web</span>Studio</a
+          <a href="#" lang="en" class="link logo logo--color"
+            ><span class="logo__color-web">Web</span>Studio</a
           >
           <address class="address">
             <ul class="list">
@@ -445,7 +451,7 @@
                 class="subscription-input"
               />
               <label for="maill"></label>
-              <button type="submit" class="subscription-btn">
+              <button type="submit" class="subscription-btn button">
                 Подписаться
                 <svg class="subscription-client" width="24" height="24">
                   <use href="./images/sprite.svg#plane"></use>
@@ -523,7 +529,9 @@
             </label>
           </div>
 
-          <button type="submit" class="subscription-btn">Отправить</button>
+          <button type="submit" class="subscription-btn button">
+            Отправить
+          </button>
         </form>
       </div>
     </div>

@@ -36,17 +36,14 @@ body {
   letter-spacing: 0.03em;
 }
 
-.list .link,
-.list .item,
+li,
 a {
   text-decoration: none;
   font-style: normal;
-}
-.list {
   list-style: none;
 }
 
-.list,
+ul,
 h1,
 h2,
 h3,
@@ -55,12 +52,6 @@ p {
   padding: 0;
   margin: 0;
 }
-
-/* основной цвет #212121 */
-/* вторичний цвет #757575 */
-/* белий основ #FFFFFF */
-/* основ голуб #2196F3 */
-/* вторичние цвет фона #2F303A */
 
 /* container site - контейнери сайта */
 .container {
@@ -78,17 +69,10 @@ p {
 .header {
   background-color: var(--main-light);
 }
-.header-portfolio {
+.header--border {
   border-bottom: 1px solid #ececec;
 }
-.container.site-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* nav site -навигатор сайта */
-
-.site.nav {
+.header--alignment {
   display: flex;
   align-items: center;
 }
@@ -102,26 +86,37 @@ p {
   line-height: 1.19;
 }
 
-.logo-web {
+.logo__color-web {
   color: var(--acсent-color);
 }
 
-.nav.list {
+.logo--color {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-family: var(--logo-text);
+  color: var(--main-light);
+}
+
+/* nav site -навигатор сайта */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__list {
   display: flex;
   margin-left: 93px;
 }
 
-/* .nav.item:not(:last-child),
-.contacts.item:not(:last-child) {
-  margin-right: 50px;
-} */
-.nav.item + .item,
-.contacts.item + .item {
+.site-nav__item + .site-nav__item,
+.contacts__item + .contacts__item {
   margin-left: 50px;
 }
 
-.nav.link,
-.contacts.link {
+.site-nav__link,
+.contacts__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -130,21 +125,16 @@ p {
   font-weight: 500;
 }
 
-.contacts.link {
-  display: flex;
-  align-items: center;
-}
-
 /* emphasis on navigation- підкреслення навігації */
-.nav.item {
+.site-nav__item {
   position: relative;
 }
-.emphasis:hover::after,
-.emphasis:focus::after {
+.site-nav--emphasis:hover::after,
+.site-nav--emphasis:focus::after {
   opacity: 1;
 }
 
-.emphasis::after {
+.site-nav--emphasis::after {
   display: inline-block;
   position: absolute;
   content: ' ';
@@ -159,48 +149,47 @@ p {
   opacity: 0;
   transition: opacity 250ms var(--timing-function);
 }
-.current.emphasis::after {
+.site-nav__link.current,
+.site-nav--emphasis.current::after {
   opacity: 1;
+  color: var(--acсent-color);
 }
 
 /* контакти */
-.contacts.list {
+.contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
-.contacts.item {
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item {
   display: flex;
   align-items: center;
   fill: var(--main-text-grey);
 }
 
-.link.current {
+/* .site-nav__link.current {
   color: var(--acсent-color);
-}
+} */
 
-.icon-mail,
-.icon-tel {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
 /* hover i focus */
-.nav .link:hover,
-.nav .link:focus,
-.nav .link:active,
+.site-nav__link:hover,
+.site-nav__link:focus,
+.site-nav__link:active,
 .footer-address .link:hover,
 .footer-address .link:focus,
-.contacts.link:hover,
-.contacts.link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--acсent-color);
-}
-.nav .link,
-.nav .link,
-.footer-address .link,
-.footer-address .link,
-.contacts.link,
-.contacts.link {
   transition: color 250ms var(--timing-function);
 }
 
@@ -210,13 +199,13 @@ p {
   padding-bottom: 94px;
 }
 
-.section.main {
+.hero {
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
 }
-.hero-fon {
+.hero--fon {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -233,7 +222,7 @@ p {
   background-size: cover;
 }
 
-.main-title {
+.hero__title {
   margin-bottom: 30px;
   margin-left: 250px;
   margin-right: 250px;
@@ -246,21 +235,18 @@ p {
 
   text-transform: uppercase;
 }
-
-.main .btr {
+.button {
   min-width: 200px;
   height: 50px;
-  text-align: center;
 
-  color: var(--main-light);
-  background-color: var(--acсent-color);
-  font-family: var(--main-text);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-
+  color: var(--main-light);
+  background-color: var(--acсent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* service features-особености услуги*/
@@ -630,16 +616,7 @@ p {
   padding-bottom: 60px;
   background-color: var(--background-dark);
 }
-.logo-footer {
-  display: inline-block;
-  margin-bottom: 20px;
 
-  font-family: var(--logo-text);
-  color: var(--main-light);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-}
 .address .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -720,24 +697,12 @@ p {
   border-radius: 4px;
 }
 .subscription-btn {
-  min-width: 200px;
-  height: 50px;
   margin-left: 12px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8755;
-
   display: flex;
-  background-color: var(--acсent-color);
-  color: var(--main-light);
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border-color: transparent;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-color: transparent;
 }
 .subscription-client {
   fill: currentColor;
