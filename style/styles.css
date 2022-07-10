@@ -52,6 +52,19 @@ p {
   padding: 0;
   margin: 0;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* container site - контейнери сайта */
 .container {
@@ -129,12 +142,12 @@ p {
 .site-nav__item {
   position: relative;
 }
-.site-nav--emphasis:hover::after,
-.site-nav--emphasis:focus::after {
+.site-nav__emphasis:hover::after,
+.site-nav__emphasis:focus::after {
   opacity: 1;
 }
 
-.site-nav--emphasis::after {
+.site-nav__emphasis::after {
   display: inline-block;
   position: absolute;
   content: ' ';
@@ -150,7 +163,7 @@ p {
   transition: opacity 250ms var(--timing-function);
 }
 .site-nav__link.current,
-.site-nav--emphasis.current::after {
+.site-nav__emphasis.current::after {
   opacity: 1;
   color: var(--acсent-color);
 }
@@ -250,19 +263,6 @@ p {
 }
 
 /* service features-особености услуги*/
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 .description.title {
   margin-bottom: 10px;
