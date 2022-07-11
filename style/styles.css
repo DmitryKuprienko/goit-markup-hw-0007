@@ -79,10 +79,10 @@ p {
 }
 
 /* header site -шапка сайта  */
-.header {
+.header--background {
   background-color: var(--main-light);
 }
-.header--border {
+.header--border-bottom {
   border-bottom: 1px solid #ececec;
 }
 .header--alignment {
@@ -157,7 +157,7 @@ p {
   width: 100%;
   height: 4px;
 
-  background: #2196f3;
+  background-color: var(--acсent-color);
   border-radius: 2px;
   opacity: 0;
   transition: opacity 250ms var(--timing-function);
@@ -210,19 +210,18 @@ p {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  text-align: center;
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  text-align: center;
-}
-.hero--fon {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -264,23 +263,27 @@ p {
 
 /* service features-особености услуги*/
 
-.description.title {
+.benefits__title {
   margin-bottom: 10px;
 
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
 }
-.description.list {
+.benefits__list {
   display: flex;
 }
 
-.description.item {
+.benefits__item {
   width: calc((100% - 90px) / 4);
-  margin-right: 30px;
-  align-items: flex-end;
+
+  text-align: start;
 }
-.blok-icon {
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.benefits__container-icon {
   display: flex;
   justify-content: center;
   height: 120px;
@@ -291,50 +294,41 @@ p {
   background-repeat: no-repeat;
   border-radius: 4px;
 }
-.icon {
+/* .benefits__icon {
   background-size: contain;
-}
+} */
 
-.disc-text {
+.benefits__text {
   line-height: 1.71;
   color: var(--main-text-grey);
 }
 
-/* what-doing-чем занимаемся */
-.section.not-padding {
+/* services-чем занимаемся */
+.services--not-padding {
   padding-top: 0;
 }
-.section-titele {
+.container__titele {
   margin-bottom: 50px;
-
   font-weight: 700;
   font-size: 36px;
 }
-.what-doing,
-.team,
-.client {
-  text-align: center;
-  /* background-color: var(--background-light); */
-}
-.what-doing .list {
+
+.services__list {
   display: flex;
 }
 
-.what-doing .item:not(:last-child) {
+.services__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.what-doing .imeges {
-  width: 370px;
-}
-.what-doing .item {
+.services__item {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 294px;
   position: relative;
 }
-.what-doing .item::before {
+.services__item::before {
   display: inline-block;
   position: absolute;
   content: '';
@@ -343,12 +337,15 @@ p {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.item-services {
-  position: absolute;
+.services__imeges {
+  width: 370px;
+}
 
+.services__label {
+  position: absolute;
   max-width: 100%;
 }
-.what-doing .services {
+.services__name {
   padding-bottom: 27px;
   padding-top: 27px;
 
@@ -359,32 +356,29 @@ p {
 }
 
 /* Наша команда */
-.section.team {
+.team--background {
   background-color: var(--background-grey);
 }
 
-.team.images {
-  width: 270px;
-  /* margin-bottom: 30px; */
-}
-.team.list {
+.team__list {
   display: flex;
 }
-.team.item {
+.team__item {
   margin-right: 30px;
   text-align: center;
   background-color: var(--main-light);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.team-content {
+.team__images {
+  width: 270px;
+  /* margin-bottom: 30px; */
+}
+.team__container {
   padding-top: 30px;
   padding-bottom: 16px;
 }
-.team .team-title {
-  top: 0;
-  right: 0;
-
+.team__name {
   margin-bottom: 10px;
   color: var(--main-text-color);
   font-weight: 500;
@@ -392,7 +386,7 @@ p {
   line-height: 1.19;
 }
 
-.team-text {
+.team__specialization {
   color: var(--main-text-grey);
 }
 /* соціальні мережі---social networks */
@@ -479,15 +473,15 @@ p {
   margin-bottom: 50px;
 }
 
-.button.list {
+.filter__list {
   display: flex;
   justify-content: center;
 }
-.button.item + .item {
+.filter__item + .filter__item {
   margin-left: 8px;
 }
 
-.filter .btn {
+.filter__button {
   min-width: 73px;
   height: 38px;
   padding: 6px 22px;
@@ -509,9 +503,9 @@ p {
   transition: background-color 250ms var(--timing-function),
     color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
-.filter .btn:hover,
-.filter .btn:focus,
-.filter .btn:active {
+.filter__button:hover,
+.filter__button:focus,
+.filter__button:active {
   background-color: var(--acсent-color);
   color: var(--main-light);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -617,7 +611,7 @@ p {
 .footer-blok {
   margin-right: 70px;
 }
-.social--margin {
+.footer__social--margi-right {
   margin-right: 93px;
 }
 
@@ -649,10 +643,8 @@ p {
 
 .footer-form {
   display: flex;
-  height: 86px;
-}
-.form-footer__field {
-  margin-left: 93px;
+  max-height: 86px;
+  height: 100%;
 }
 
 .footer-form__label {
@@ -677,7 +669,7 @@ p {
   color: #ffffff;
 }
 
-.footer-btn {
+.footer-form__btn {
   margin-left: 12px;
   display: flex;
   align-items: center;
@@ -701,15 +693,70 @@ p {
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
+  z-index: 10;
 }
-.backdrop.is-hidden {
+.backdrop__is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop__is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotatez(360deg);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+
+  display: flex;
+  padding: 40px;
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--main-light);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1) rotatez(0deg);
+
+  transition: transform 250ms var(--timing-function);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: inherit;
+  transition: color 250ms var(--modal-icon-close-color);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--acсent-color);
+}
+
+.modal-icon {
+  width: 11px;
+  height: 11px;
+
+  background-position: center;
+  background-size: cover;
+  fill: currentColor;
 }
 .form-group-field {
   width: 100%;
@@ -855,58 +902,4 @@ p {
   background-size: contain;
   background-origin: border-box;
   background-repeat: no-repeat;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  flex-direction: column;
-
-  display: flex;
-  padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
-
-  background-color: var(--main-light);
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1) rotatez(0deg);
-
-  transition: transform 250ms var(--timing-function);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  margin: 0;
-  padding: 0;
-  color: #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: inherit;
-  transition: color 250ms var(--modal-icon-close-color);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  color: var(--acсent-color);
-}
-
-.modal-icon {
-  width: 11px;
-  height: 11px;
-
-  background-position: center;
-  background-size: cover;
-  fill: currentColor;
 }

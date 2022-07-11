@@ -19,7 +19,7 @@
   </head>
   <body class="page">
     <!--верхня линия-->
-    <header class="header">
+    <header class="header header--background">
       <!--навигатор сайта-->
       <div class="container header--alignment">
         <nav class="site-nav">
@@ -66,64 +66,66 @@
 
     <main>
       <!-- головний герой-main hero -->
-      <section class="hero hero--fon section">
-        <div class="container main">
+      <section class="hero section">
+        <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button" data-modal-open>
+          <button type="button" class="hero__button button" data-modal-open>
             Заказать услугу
           </button>
         </div>
       </section>
 
-      <!--особености услуг-features of services-->
-      <section class="section">
+      <!--Преваги-benefits-->
+      <section class="section benefits">
         <div class="container">
-          <h2 class="title visually-hidden">наши особливости</h2>
-          <ul class="description list">
-            <li class="description item">
-              <div class="blok-icon">
-                <svg class="icon" width="70" height="70">
+          <h2 class="benefits__title--none visually-hidden">
+            наши особливости
+          </h2>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <div class="benefits__container-icon">
+                <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/sprite.svg#icon-radar"></use>
                 </svg>
               </div>
-              <h3 class="description title">Внимание к деталям</h3>
-              <p class="disc-text">
+              <h3 class="benefits__title">Внимание к деталям</h3>
+              <p class="benefits__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="description item">
-              <div class="blok-icon">
-                <svg class="icon" width="70" height="70">
+            <li class="benefits__item">
+              <div class="benefits__container-icon">
+                <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="description title">Пунктуальность</h3>
-              <p class="disc-text">
+              <h3 class="benefits__title">Пунктуальность</h3>
+              <p class="benefits__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="description item">
-              <div class="blok-icon">
-                <svg class="icon" width="70" height="70">
+            <li class="benefits__item">
+              <div class="benefits__container-icon">
+                <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/sprite.svg#icon-comp"></use>
                 </svg>
               </div>
-              <h3 class="description title">Планирование</h3>
-              <p class="disc-text">
+              <h3 class="benefits__title">Планирование</h3>
+              <p class="benefits__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="description item icon-comp">
-              <div class="blok-icon">
-                <svg class="icon" width="70" height="70">
+            <li class="benefits__item">
+              <div class="benefits__container-icon">
+                <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="description title">Современные технологии</h3>
-              <p class="disc-text">
+              <h3 class="benefits__title">Современные технологии</h3>
+              <p class="benefits__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -131,58 +133,58 @@
           </ul>
         </div>
       </section>
-      <!--чем занимаемся-->
-      <section class="section what-doing not-padding">
+      <!--Послуги-- services-->
+      <section class="section services services--not-padding">
         <div class="container">
-          <h2 class="section-titele">Чем мы занимаемся</h2>
-          <ul class="list">
-            <li class="item">
+          <h2 class="container__titele">Чем мы занимаемся</h2>
+          <ul class="services__list">
+            <li class="services__item">
               <img
-                class="imeges writing"
+                class="services__imeges"
                 src="./images/code-writing.jpg"
                 alt="розробка програмного забезпечення"
               />
-              <div class="item-services">
-                <p class="services">Дизайнерские решения</p>
+              <div class="services__label">
+                <p class="services__name">Дизайнерские решения</p>
               </div>
             </li>
-            <li class="item">
+            <li class="services__item">
               <img
-                class="imeges fron"
+                class="services__imeges"
                 src="./images/create-front-end.jpg"
                 alt="тестування мобільного додатку"
               />
-              <div class="item-services">
-                <p class="services">Мобильные приложения</p>
+              <div class="services__label">
+                <p class="services__name">Мобильные приложения</p>
               </div>
             </li>
-            <li class="item">
+            <li class="services__item">
               <img
-                class="imeges tablet"
+                class="services__imeges"
                 src="./images/tablet.jpg"
                 alt="налаштування палітри кольорів"
               />
-              <div class="item-services">
-                <p class="services">Десктопные приложения</p>
+              <div class="services__label">
+                <p class="services__name">Десктопные приложения</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
       <!--Наша команда-Our team-->
-      <section class="section team">
+      <section class="section team team--background">
         <div class="container">
-          <h2 class="section-titele">Наша команда</h2>
-          <ul class="team list">
-            <li class="team item">
+          <h2 class="container__titele">Наша команда</h2>
+          <ul class="team__list">
+            <li class="team__item">
               <img
-                class="team images igor"
+                class="team__images igor"
                 src="./images/igor.jpg"
                 alt="foto-igor"
               />
-              <div class="team-content">
-                <h3 class="team-title">Игорь Демьяненко</h3>
-                <p lang="en" class="team-text">Product Designer</p>
+              <div class="team__container">
+                <h3 class="team__name">Игорь Демьяненко</h3>
+                <p lang="en" class="team__specialization">Product Designer</p>
               </div>
               <div class="social">
                 <ul class="social__list">
@@ -213,15 +215,15 @@
                 </ul>
               </div>
             </li>
-            <li class="team item">
+            <li class="team__item">
               <img
-                class="team images"
+                class="team__images"
                 src="./images/Olga.jpg"
                 alt="foto-olga"
               />
-              <div class="team-content">
-                <h3 class="team-title">Ольга Репина</h3>
-                <p lang="en" class="team-text">Frontend Developer</p>
+              <div class="team__containert">
+                <h3 class="team__name">Ольга Репина</h3>
+                <p lang="en" class="team__specialization">Frontend Developer</p>
               </div>
               <div class="social">
                 <ul class="social__list">
@@ -252,15 +254,15 @@
                 </ul>
               </div>
             </li>
-            <li class="team item">
+            <li class="team__item">
               <img
-                class="team images"
+                class="team__images"
                 src="./images/Nikolay.jpg"
                 alt="foto-Nikolay"
               />
-              <div class="team-content">
-                <h3 class="team-title">Николай Тарасов</h3>
-                <p lang="en" class="team-text">Marketing</p>
+              <div class="team__container">
+                <h3 class="team__name">Николай Тарасов</h3>
+                <p lang="en" class="team__specialization">Marketing</p>
               </div>
               <div class="social">
                 <ul class="social__list">
@@ -291,15 +293,15 @@
                 </ul>
               </div>
             </li>
-            <li class="team item">
+            <li class="team__item">
               <img
-                class="team images michael"
+                class="team__images"
                 src="./images/Michael.jpg"
                 alt="foto-Michael"
               />
-              <div class="team-content">
-                <h3 class="team-title">Михаил Ермаков</h3>
-                <p lang="en" class="team-text">UI Designer</p>
+              <div class="team__containert">
+                <h3 class="team__name">Михаил Ермаков</h3>
+                <p lang="en" class="team__specialization">UI Designer</p>
               </div>
               <div class="social">
                 <ul class="social__list">
@@ -336,7 +338,7 @@
       <!-- наши кліенти -our customers -->
       <section class="section client">
         <div class="container">
-          <h2 class="section-titele">Постоянные клиенты</h2>
+          <h2 class="container__titele">Постоянные клиенты</h2>
           <ul class="list client">
             <li class="item">
               <a href="#" class="link"
@@ -411,7 +413,7 @@
           </address>
         </div>
 
-        <div class="social social--margin">
+        <div class="social footer__social--margi-right">
           <h2 class="social__title">присоединяйтесь</h2>
           <ul class="social__list">
             <li class="social__item">
@@ -443,18 +445,17 @@
         <!-- підписка-subscription -->
 
         <form class="footer-form">
-          <div class="footer-form--field">
-            <label class="footer-form__label">
-              Подпишитесь на рассылк
-              <input
-                type="email"
-                name="maill "
-                placeholder="E-mail"
-                class="footer-form__input"
-              />
-            </label>
-          </div>
-          <button type="submit" class="footer-btn button">
+          <label class="footer-form__label">
+            Подпишитесь на рассылк
+            <input
+              type="email"
+              name="maill "
+              placeholder="E-mail"
+              class="footer-form__input"
+            />
+          </label>
+
+          <button type="submit" class="footer-form__btn button">
             Подписаться
             <svg class="footer-form__icon" width="24" height="24">
               <use href="./images/sprite.svg#plane"></use>
@@ -464,7 +465,7 @@
       </div>
     </footer>
     <!-- motalka -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop backdrop__is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" data-modal-close>
           <svg class="modal-icon">
