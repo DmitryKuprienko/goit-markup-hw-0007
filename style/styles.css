@@ -577,17 +577,13 @@ p {
   margin-right: 0;
 }
 
-/* .section-imeg {
-  margin-bottom: 20px;
-} */
-
 /* title-заголовки */
 
 .portfolio__description {
+  justify-content: flex-end;
   padding: 20px 24px;
 }
-
-.description-title {
+.portfolio__title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -595,7 +591,7 @@ p {
   line-height: 2;
 }
 
-.description-text {
+.portfolio__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
@@ -730,7 +726,7 @@ p {
   transition: transform 250ms var(--timing-function);
 }
 
-.modal-close-btn {
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -749,12 +745,12 @@ p {
   transition: color 250ms var(--modal-icon-close-color);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
   color: var(--acсent-color);
 }
 
-.modal-icon {
+.modal__icon {
   width: 11px;
   height: 11px;
 
@@ -782,7 +778,7 @@ p {
   text-align: left;
   padding: 0;
 }
-.form-title {
+.form__title {
   display: inline-block;
   padding-bottom: 12px;
 
@@ -792,7 +788,7 @@ p {
   color: var(--main-text-color);
 }
 
-.form-label {
+.form__label {
   display: block;
   font-size: 12px;
   line-height: 1.17;
@@ -802,13 +798,13 @@ p {
   margin-bottom: 4px;
 }
 
-.form-field {
+.form__field {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.form-input {
+.form__input {
   width: 100%;
   min-height: 40px;
 
@@ -820,12 +816,12 @@ p {
   color: var(--main-text-grey);
   transition: 250ms var(--timing-function);
 }
-.form-input:focus-within,
-.form-textarea:focus-within {
+.form__input:focus-within,
+.form__textarea:focus-within {
   border: 1px solid var(--acсent-color);
 }
 
-.input-icon {
+.from__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -833,11 +829,11 @@ p {
   display: inline-block;
   transition: fill 250ms var(--timing-function);
 }
-.form-field:focus-within > .input-icon {
+.form__field:focus-within > .from__icon {
   fill: var(--acсent-color);
 }
 
-.form-textarea {
+.form__textarea {
   display: block;
   width: 100%;
   min-height: 120px;
@@ -851,7 +847,7 @@ p {
   outline: none;
 }
 
-.form-textarea::placeholder {
+.form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
   font-size: 14px;
