@@ -810,6 +810,7 @@ p {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding: 0;
   padding-left: 42px;
   outline: none;
 
@@ -821,7 +822,7 @@ p {
   border: 1px solid var(--acсent-color);
 }
 
-.from__icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -854,32 +855,21 @@ p {
   line-height: 1.4;
   letter-spacing: 0.01em;
 }
-.form-field.textarea {
+.form__field--margin {
   margin-bottom: 20px;
 }
-.modal .subscription-btn {
-  margin-right: auto;
-  margin-left: auto;
-}
 
-.modal .subscription-btn:hover {
-  background-color: #188ce8;
-}
-
-.checkbox-label {
+.checkbox {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--main-text-grey);
 }
-.checkbox-icon {
+.checkbox--retreat {
+  margin-bottom: 30px;
+}
+
+.checkbox__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -888,18 +878,30 @@ p {
   border: 2px solid var(--main-text-color);
   border-radius: 2px;
 }
+.checkbox__input {
+  line-height: 1.71;
+  color: var(--main-text-grey);
+}
 
-.form-agreement-link {
+.checkbox__link {
   color: var(--acсent-color);
   text-decoration: underline;
   margin-left: 2px;
 }
 
-.checkbox:checked + .checkbox-icon {
+.checkbox__input:checked + .checkbox__icon {
   border-color: transparent;
   background-image: url(../images/icon-check.svg);
   background-color: var(--acсent-color);
   background-size: contain;
   background-origin: border-box;
   background-repeat: no-repeat;
+}
+.form__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form__button:hover {
+  background-color: #188ce8;
 }
