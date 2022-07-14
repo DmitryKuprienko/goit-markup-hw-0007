@@ -98,11 +98,6 @@ p {
   font-size: 26px;
   line-height: 1.19;
 }
-
-.logo__color-web {
-  color: var(--acсent-color);
-}
-
 .logo--color {
   display: inline-block;
   margin-bottom: 20px;
@@ -110,6 +105,11 @@ p {
   font-family: var(--logo-text);
   color: var(--main-light);
 }
+.logo__color-web {
+  color: var(--acсent-color);
+}
+
+
 
 /* nav site -навигатор сайта */
 
