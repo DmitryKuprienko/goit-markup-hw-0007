@@ -557,7 +557,7 @@ body {
 
 .benefits__text {
   line-height: 1.71;
-  color: var(--main-text-grey);
+  color: #757575;
 }
 
 /* services-чем занимаемся */
