@@ -315,6 +315,7 @@ body {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-color: transparent;
   cursor: pointer;
 }
 
@@ -708,6 +709,7 @@ body {
 
 .social__link--background-footer {
   background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 /* our clients-наши кліенти */
@@ -951,12 +953,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-color: transparent;
 }
 
 .footer-form__icon {
   fill: currentColor;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 .address__link {
@@ -1081,7 +1082,7 @@ body {
 
 .form__title {
   display: inline-block;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
