@@ -1,3 +1,6 @@
+
+
+
 .portfolio__thumb {
     position: relative;
     overflow: hidden;
@@ -5,10 +8,15 @@
 }
 
 
+
 .portfolio__list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    // margin: -15px;
+    &--positioning{
+            display: flex;
+            flex-wrap: wrap;
+        }
 }
 
 .portfolio__item {
@@ -39,7 +47,7 @@
 /* title-заголовки */
 
 .portfolio__description {
-    justify-content: flex-end;
+    text-align: start;
     padding: 20px 24px;
 }
 
@@ -47,7 +55,7 @@
     margin-bottom: 4px;
 
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 2;
 }
 

@@ -1,7 +1,15 @@
 .checkbox {
     position: relative;
-    @include centerFlex( baseline);
+    @include centerFlex();
     justify-content: center;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    
+    color: $main-text-grey;
+
     &--retreat {
             margin-bottom: 30px;
         }
@@ -35,5 +43,7 @@
     color: $acсent-color;
     text-decoration: underline;
     margin-left: 2px;
+
+    
 }
 

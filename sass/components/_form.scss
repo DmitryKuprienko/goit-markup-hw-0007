@@ -6,6 +6,10 @@
     width: 448px;
     text-align: left;
     padding: 0;
+    &__group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 }
 
 .form__title {
@@ -35,8 +39,8 @@
     &--margin {
             margin-bottom: 20px;
         }
-     &:focus-within>.from__icon {
-        fill: $acсent-color;}
+                 
+    
 }
 
 .form__input {
@@ -51,9 +55,10 @@
 
     color: $main-text-grey;
     transition: 250ms $timing-function;
-    &:focus-within,
-        {border: 1px solid $acсent-color;
+    &:focus-within{
+        border: 1px solid $acсent-color;
         }
+   
 }
 
 
@@ -65,6 +70,9 @@
     transform: translateY(-50%);
     display: inline-block;
     transition: fill 250ms $timing-function;
+    .form__field:focus-within & {
+            fill: $acсent-color;
+        }
 }
 
 
