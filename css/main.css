@@ -488,6 +488,29 @@ body {
   color: #2196f3;
 }
 
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  background-size: cover;
+  outline: 1px solid tomato;
+}
+
+.menu-button.is-open .menu-button__nav {
+  display: none;
+}
+
+.menu-button_closs {
+  display: none;
+}
+.menu-button.is-open .menu-button_closs {
+  display: block;
+}
+
 .hero {
   max-width: 1600px;
   height: 600px;
